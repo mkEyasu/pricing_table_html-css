@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --gb-button: #3dcf8e;
+  --text-color: #fff;
+  --light-text-color: #8b9396;
+  --transition-effect: 0.05s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Serif", serif;
+  /* outline: 1px solid #000; */
+}
+* button {
+  text-transform: uppercase;
+}
+
+body {
+  background-color: #f5fafd;
+}
+
+.main_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  justify-content: center;
+  margin-top: 7em;
+}
+
+.price_heading_wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.price_heading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.price_heading h1 {
+  font-size: 40px;
+}
+
+.price_heading span {
+  opacity: 0.75;
+}
+
+.price_scope_action button {
+  font-weight: 600;
+  margin-inline: -3px;
+  border: none;
+  font-size: 14px;
+  padding: 15px 30px;
+  background-color: #e7f7fd;
+}
+
+.price_scope_action button.active {
+  background-color: var(--gb-button);
+  color: var(--text-color);
+}
+
+/* ######--- card section ---####### */
+.card_section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card_wrapper {
+  width: 20em;
+  justify-content: center;
+  text-align: center;
+  padding-block: 4em;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(31, 85, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 3px;
+  border: 0.1px solid rgba(255, 255, 255, 0.18);
+  transition: var(--transition-effect);
+}
+
+.card_wrapper.active {
+  box-shadow: 0 0 32px rgba(31, 85, 135, 0.36);
+  transform: scale(1.05);
+  background-color: #0099ff;
+  color: #fff;
+  z-index: 1;
+  transition: var(--transition-effect);
+}
+
+.card_wrapper.active .card_content button {
+  background-color: var(--gb-button);
+  border-color: #fff;
+  color: var(--text-color);
+  transition: var(--transition-effect);
+}
+
+.card_wrapper.active .card_content button:hover {
+  background-color: #ffffff;
+  border-color: #0099ff;
+  color: #0099ff;
+  transition: var(--transition-effect);
+}
+
+.card_wrapper.active .card_content span {
+  color: #fff;
+  transition: var(--transition-effect);
+}
+
+.card_content hh4 {
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.card_content {
+  position: relative;
+}
+
+.card_content .tag_abs {
+  text-transform: uppercase;
+  position: absolute;
+  margin-left: 7em;
+  margin-top: -3.3em;
+  background-color: #ff4747;
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 900;
+  padding: 4px 8px;
+}
+
+.card_content h3 {
+  margin-block: 20px;
+}
+
+.card_content h3 span {
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+.card_content h3 b {
+  font-size: 50px;
+  opacity: 1;
+  font-weight: 900;
+}
+
+.card_offers {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding-left: 6em;
+  gap: 20px;
+}
+
+.card_offers span {
+  font-size: 14px;
+  position: relative;
+  color: var(--light-text-color);
+}
+
+.card_offers span::before {
+  content: url(../check.svg);
+  position: absolute;
+  transform: translate(-30px, -3px);
+}
+
+.card_content button {
+  font-weight: 600;
+  margin-top: 30px;
+  border: 1px solid #121212;
+  font-size: 12px;
+  transition: var(--transition-effect);
+  background: transparent;
+  padding: 12px 24px;
+}
+
+.card_content button:hover {
+  background-color: var(--gb-button);
+  transition: var(--transition-effect);
+  border-color: #fff;
+  color: var(--text-color);
+}
